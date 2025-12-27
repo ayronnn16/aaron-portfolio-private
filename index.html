@@ -12,7 +12,11 @@
     <header>
         <a href="#" class="logo">Aaron</a>
 
-        <nav>
+        <div class="menu-btn" id="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav">
             <a href="#" class="active"> Home</a>
             <a href="#" >Services</a>
             <a href="#" >Certificates</a>
@@ -21,14 +25,28 @@
             <a href="#" >Contact</a>
         </nav>
     </header>
+
+    <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menu-btn");
+        const nav = document.getElementById("nav");
+
+        menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("active");
+            console.log("clicked", nav.classList);
+        });
+    });
+    </script>
+
+
     <section class="home">
         <div class="home-img">
-            <img src="pic-ko.png" alt="">
+            <img src="temp-pic.png" alt="">
         </div>
         <div class="home-content">
             <h1>Hello, I'm <span>Aaron</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
-            <p>I am an Information Systems student and a freelance web developer and designer. I create responsive, user-friendly websites by combining clean code with engaging designs. Passionate about technology and innovation, I deliver tailored digital solutions while continuously learning and adapting to the latest trends in web development and design.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus labore dolores esse. Odit similique doloribus tenetur doloremque, sunt commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam quaerat neque asperiores ea.</p>
             <div class="social-icons">
                 <a href="https://web.facebook.com/ayronnn.bnd"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://github.com/ayronnn16"><i class="fa-brands fa-github"></i></a>
@@ -38,5 +56,4 @@
         </div>
     </section>
 </body>
-
 </html>
