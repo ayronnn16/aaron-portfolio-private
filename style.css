@@ -64,36 +64,43 @@ nav a.active{
     border-bottom: 3px solid #1167b1;
 }
 
+.menu-btn{
+    font-size: 3rem;
+    color: #1167b1;
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+}
+
 @media(max-width:995px){
+
+    .menu-btn{
+        display: block;
+    }
+
     nav{
-        position: absolute;
-        display: none;
+        position: fixed;
         top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: white;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        background: white;
+        padding: 8rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        transition: 0.3s ease;
+        z-index: 1000;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.15);
     }
 
     nav.active{
-        display: block;
+        right: 0;
     }
 
     nav a{
-        display: block;
         font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    nav a:hover,
-    nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #1167b1;
+        margin: 0;
     }
 }
 
