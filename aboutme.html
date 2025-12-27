@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style-aboutme.css">
+    <title>About Me</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+
+        <div class="menu-btn" id="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav">
+            <a href="index.html"> Home</a>
+            <a href="aboutme.html" class="active">About Me</a>
+            <a href="#" >Certificates</a>
+            <a href="#" >Projects</a>
+            <a href="skills.html" >Skills</a>
+            <a href="#" >Contact</a>
+        </nav>
+    </header>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menu-btn");
+        const nav = document.getElementById("nav");
+        const header = document.querySelector("header");
+
+        let lastScrollY = window.scrollY;
+
+        // Mobile menu toggle
+        menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+        // Hide / show navbar on scroll
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                // scrolling down
+                header.classList.add("hide");
+            } else {
+                // scrolling up
+                header.classList.remove("hide");
+            }
+            lastScrollY = window.scrollY;
+        });
+    });
+    </script>
+
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <p class="about-text">
+            I am an <strong>Information Systems student</strong> and a 
+            <strong>freelance web developer and web designer</strong> who builds
+            clean, responsive, and user-friendly websites. I enjoy transforming ideas
+            into functional digital experiences using modern web technologies.
+        </p>
+
+        <!-- Personal Information -->
+        <div class="personal-info">
+            <h3>Personal Information</h3>
+
+            <ul>
+            <li>
+                <i class="fas fa-user"></i>
+                <span><strong>Name:</strong> Aaron Nino Bendo</span>
+            </li>
+            <li>
+                <i class="fas fa-graduation-cap"></i>
+                <span><strong>Course:</strong> Information System</span>
+            </li>
+            <li>
+                <i class="fas fa-briefcase"></i>
+                <span><strong>Role:</strong> Web Developer / Web Designer</span>
+            </li>
+            <li>
+                <i class="fas fa-location-dot"></i>
+                <span><strong>Location:</strong> Philippines</span>
+            </li>
+            <li>
+                <i class="fas fa-envelope"></i>
+                <span><strong>Email:</strong> aaronbendo16@gmail.com</span>
+            </li>
+            </ul>
+        </div>
+
+        <!-- Skills -->
+        <div class="skills">
+            <div class="skill">
+            <i class="fas fa-code"></i>
+            <h4>Web Development</h4>
+            <p>HTML, CSS, JavaScript, PHP, MySQL</p>
+            </div>
+
+            <div class="skill">
+            <i class="fas fa-paint-brush"></i>
+            <h4>Web Design</h4>
+            <p>UI/UX Design, Responsive Layouts</p>
+            </div>
+
+            <div class="skill">
+            <i class="fas fa-laptop-code"></i>
+            <h4>Freelancing</h4>
+            <p>Client Communication, Problem Solving</p>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>
