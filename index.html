@@ -10,30 +10,45 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Aaron</a>
+        <a href="#" class="logo">Portfolio</a>
 
         <div class="menu-btn" id="menu-btn">
             <i class="fas fa-bars"></i>
         </div>
 
         <nav id="nav">
-            <a href="#" class="active"> Home</a>
-            <a href="#" >Services</a>
+            <a href="index.html" class="active"> Home</a>
+            <a href="aboutme.html" >About Me</a>
             <a href="#" >Certificates</a>
             <a href="#" >Projects</a>
-            <a href="#" >Skills</a>
+            <a href="skills.html" >Skills</a>
             <a href="#" >Contact</a>
         </nav>
     </header>
 
-    <script defer>
+    <script>
     document.addEventListener("DOMContentLoaded", () => {
         const menuBtn = document.getElementById("menu-btn");
         const nav = document.getElementById("nav");
+        const header = document.querySelector("header");
 
+        let lastScrollY = window.scrollY;
+
+        // Mobile menu toggle
         menuBtn.addEventListener("click", () => {
             nav.classList.toggle("active");
-            console.log("clicked", nav.classList);
+        });
+
+        // Hide / show navbar on scroll
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                // scrolling down
+                header.classList.add("hide");
+            } else {
+                // scrolling up
+                header.classList.remove("hide");
+            }
+            lastScrollY = window.scrollY;
         });
     });
     </script>
@@ -46,13 +61,16 @@
         <div class="home-content">
             <h1>Hello, I'm <span>Aaron</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus labore dolores esse. Odit similique doloribus tenetur doloremque, sunt commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam quaerat neque asperiores ea.</p>
+            <p>I am an Information Systems student and a freelance web developer and designer.
+                I create responsive, user-friendly websites by combining clean code with engaging designs.
+                Passionate about technology and innovation, I deliver tailored digital solutions while
+                continuously learning and adapting to the latest trends in web development and design.</p>
             <div class="social-icons">
                 <a href="https://web.facebook.com/ayronnn.bnd"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://github.com/ayronnn16"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.instagram.com/ayronnn_bnd/"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="#" class="btn">Hire me</a>
+            <a href="aboutme.html" class="btn">Learn More About Me</a>
         </div>
     </section>
 </body>
