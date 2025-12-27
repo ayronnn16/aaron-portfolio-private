@@ -174,7 +174,7 @@ nav a.active{
 }
 
 .skill-card li {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #555;
   line-height: 1.9;
 }
@@ -223,4 +223,5 @@ nav a.active{
   .skill-card {
     padding: 45px 25px;
   }
+
 }
