@@ -37,6 +37,11 @@ header{
     z-index: 100;
 }
 
+header.hide {
+    transform: translateY(-120%);
+    transition: transform 0.4s ease;
+}
+
 .logo{
     font-size: 3rem;
     color: #1167b1;
@@ -265,4 +270,5 @@ span{
         margin-top: 4rem;
     }
 }
+
 
